@@ -5,7 +5,7 @@ import tsConfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: "/geveo-web/",
+  base: "/geveo-public-site/",
   plugins: [
     tsConfigPaths(),
     tanstackStart({

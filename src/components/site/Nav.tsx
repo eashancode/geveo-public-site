@@ -7,8 +7,8 @@ const links = [
   { to: "/solutions", label: "Solutions" },
   { to: "/case-studies", label: "Case Studies" },
   { to: "/evernode", label: "Evernode" },
-  { href: "/geveo-web/#careers", label: "Careers" },
-  { href: "/geveo-web/#contact", label: "Contact" },
+  { href: "/geveo-public-site/#careers", label: "Careers" },
+  { href: "/geveo-public-site/#contact", label: "Contact" },
 ];
 
 export function Nav() {
@@ -56,7 +56,7 @@ export function Nav() {
           )}
         </nav>
         <a
-          href="/geveo-web/#contact"
+          href="/geveo-public-site/#contact"
           className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground pl-5 pr-2 py-1.5 text-sm font-medium shadow-green hover:shadow-[0_14px_36px_-12px_color-mix(in_oklab,var(--primary)_60%,transparent)] hover:brightness-105 transition-all"
         >
           Talk to us

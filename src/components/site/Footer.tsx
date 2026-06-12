@@ -50,9 +50,9 @@ export function Footer() {
                 heading: "Company",
                 links: [
                   { label: "About Us", to: "/about" },
-                  { label: "Story", href: "/geveo-web/#company" },
-                  { label: "Careers", href: "/geveo-web/#careers" },
-                  { label: "Contact", href: "/geveo-web/#contact" },
+                  { label: "Story", href: "/geveo-public-site/#company" },
+                  { label: "Careers", href: "/geveo-public-site/#careers" },
+                  { label: "Contact", href: "/geveo-public-site/#contact" },
                 ],
               },
               {
