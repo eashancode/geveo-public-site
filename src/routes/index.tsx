@@ -12,7 +12,6 @@ import { TrustRecognition } from "@/components/site/TrustRecognition";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Story } from "@/components/site/Story";
 import { People } from "@/components/site/People";
-import { Careers } from "@/components/site/Careers";
 import { Innovation } from "@/components/site/Innovation";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
@@ -54,7 +53,6 @@ function Index() {
         <TrustRecognition />
         <Story />
         <People />
-        <Careers />
         <Innovation />
         <Contact />
       </main>

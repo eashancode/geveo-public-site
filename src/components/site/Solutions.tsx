@@ -5,7 +5,9 @@ import {
   BrainCircuit,
   Smartphone,
   RefreshCcw,
+  ArrowUpRight,
 } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 const solutions = [
   {
@@ -97,7 +99,6 @@ export function Solutions() {
                     </div>
                     <span className="absolute -inset-1 rounded-2xl border border-[#53ad6f]/0 group-hover:border-[#53ad6f]/40 transition-colors duration-500" />
                   </div>
-                  <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-[#53ad6f]">{s.tag}</span>
                 </div>
 
                 <h3 className="mt-5 font-display text-xl md:text-2xl tracking-[-0.01em]">
@@ -116,10 +117,13 @@ export function Solutions() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground">
-                  Explore solution
-                  <span className="transition-transform group-hover:translate-x-1 text-[#53ad6f]">→</span>
-                </div>
+                <Link
+                  to="/solutions"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-all"
+                >
+                  Explore solutions
+                  <ArrowUpRight className="h-4 w-4 text-[#53ad6f] transition-transform group-hover:translate-x-1" />
+                </Link>
               </article>
             );
           })}

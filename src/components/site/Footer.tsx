@@ -51,7 +51,7 @@ export function Footer() {
                 links: [
                   { label: "About Us", to: "/about" },
                   { label: "Story", href: "/geveo-public-site/#company" },
-                  { label: "Careers", href: "/geveo-public-site/#careers" },
+                  { label: "Careers", to: "/careers" },
                   { label: "Contact", href: "/geveo-public-site/#contact" },
                 ],
               },

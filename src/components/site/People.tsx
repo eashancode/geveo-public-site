@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import teamStandup from "@/assets/team-standup.jpg";
 import teamReview from "@/assets/team-review.jpg";
 import teamWhiteboard from "@/assets/team-whiteboard.jpg";
@@ -44,14 +45,12 @@ export function People() {
               ))}
             </div>
 
-            <a
-              href="https://jobs.geveo.com/"
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              to="/careers"
               className="mt-7 inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-5 py-2.5 text-sm font-medium hover:border-primary hover:text-primary transition"
             >
               Explore careers <span>↗</span>
-            </a>
+            </Link>
           </div>
 
           <div className="lg:col-span-6 grid grid-cols-2 gap-3 sm:gap-4">

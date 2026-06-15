@@ -3,11 +3,12 @@ import { Link } from "@tanstack/react-router";
 import logo from "@/assets/geveo-logo.svg";
 
 const links = [
+  { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   { to: "/solutions", label: "Solutions" },
   { to: "/case-studies", label: "Case Studies" },
   { to: "/evernode", label: "Evernode" },
-  { href: "/geveo-public-site/#careers", label: "Careers" },
+  { to: "/careers", label: "Careers" },
   { href: "/geveo-public-site/#contact", label: "Contact" },
 ];
 
@@ -49,7 +50,10 @@ export function Nav() {
                   key={l.label}
                   to={l.to}
                   className="nav-link relative px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  activeProps={{ className: "nav-link relative px-3 py-2 text-sm text-foreground font-medium" }}
+                  activeProps={{
+                    className:
+                      "nav-link relative px-3 py-2 text-sm text-foreground font-medium active",
+                  }}
                   activeOptions={l.to === "/" ? { exact: true } : undefined}
                 >
                   {l.label}
@@ -103,8 +107,10 @@ export function Nav() {
                   key={l.label}
                   to={l.to}
                   onClick={() => setOpen(false)}
-                  className="block px-3 py-3 text-base text-muted-foreground hover:text-foreground transition-colors"
-                  activeProps={{ className: "block px-3 py-3 text-base text-foreground font-medium" }}
+                  className="block px-3 py-3 text-base text-muted-foreground hover:text-foreground transition duration-200"
+                  activeProps={{
+                    className: "block px-3 py-3 text-base text-foreground font-medium",
+                  }}
                 >
                   {l.label}
                 </Link>
@@ -113,7 +119,7 @@ export function Nav() {
                   key={l.label}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block px-3 py-3 text-base text-muted-foreground hover:text-foreground transition-colors"
+                  className="block px-3 py-3 text-base text-muted-foreground hover:text-foreground transition duration-200"
                 >
                   {l.label}
                 </a>

@@ -2,12 +2,13 @@ const clients = [
   "Duncan Solutions",
   "Australian National University",
   "Evernode",
+  "EVERPOWER LABS",
   "Sigma Bravo",
   "Zen Ex Machina",
   "Argyle Insurance",
   "Doing Good Rewards",
   "Xentro",
-  "Xpectra",
+  "Xspectar",
 ];
 
 // Subtle weight variation for visual rhythm
@@ -32,7 +33,6 @@ export function TrustBar() {
           </div>
         </div>
       </div>
-
       <div
         className="marquee-wrap relative mt-10 overflow-hidden"
         style={{
