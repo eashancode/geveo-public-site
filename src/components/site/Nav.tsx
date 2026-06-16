@@ -9,7 +9,6 @@ const links = [
   { to: "/case-studies", label: "Case Studies" },
   { to: "/evernode", label: "Evernode" },
   { to: "/careers", label: "Careers" },
-  { href: "/geveo-public-site/#contact", label: "Contact" },
 ];
 
 export function Nav() {
@@ -90,7 +89,7 @@ export function Nav() {
             href="/geveo-public-site/#contact"
             className="hidden md:inline-flex group items-center gap-2 rounded-full bg-primary text-primary-foreground pl-5 pr-2 py-1.5 text-sm font-medium shadow-green hover:shadow-[0_14px_36px_-12px_color-mix(in_oklab,var(--primary)_60%,transparent)] hover:brightness-105 transition-all"
           >
-            Talk to us
+            Contact Us
             <span className="grid h-7 w-7 place-items-center rounded-full bg-primary-foreground/15 group-hover:translate-x-0.5 transition-transform">
               →
             </span>
@@ -131,7 +130,7 @@ export function Nav() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground pl-4 pr-3 py-2 text-sm font-medium shadow-green hover:brightness-105 transition-all w-max"
             >
-              Talk to us
+              Contact Us
               <span className="grid h-6 w-6 place-items-center rounded-full bg-primary-foreground/15 transition-transform">→</span>
             </a>
           </div>

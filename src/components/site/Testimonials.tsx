@@ -1,46 +1,27 @@
 import { useEffect, useState } from "react";
 import { Star, Quote } from "lucide-react";
 
+import shoebImage from "@/assets/shoeb.png";
+import mattImage from "@/assets/Matt.jpeg";
+
 const testimonials = [
   {
     quote:
-      "Geveo has been a true engineering partner for over six years. Their senior teams quietly deliver complex platforms with the kind of ownership you rarely find at scale.",
-    name: "Sarah Whitfield",
-    role: "CTO",
-    company: "Duncan Solutions",
-    initials: "SW",
+      "Geveo was helping us modernize our platform. Their team not only understood our business goals but delivered a custom solution that exceeded expectations.",
+    name: "Shoeb Mahmud",
+    role: "Product manager",
+    company: "Xentro",
+    initials: "SM",
+    image: shoebImage,
   },
   {
     quote:
-      "Their technical depth in agile analytics and dashboarding helped us reshape how enterprises measure transformation. Communication has been outstanding throughout.",
-    name: "Dr. Cherie Mylordis",
-    role: "Founder",
-    company: "Zen Ex Machina",
-    initials: "CM",
-  },
-  {
-    quote:
-      "Geveo built mission-critical fintech workflows with exceptional rigour. They understood our compliance constraints and delivered automation that just works.",
-    name: "James Patel",
-    role: "Head of Engineering",
-    company: "Apex Salary Packaging",
-    initials: "JP",
-  },
-  {
-    quote:
-      "From architecture to launch, their team felt like an extension of our own. The platform now scales effortlessly across regions — exactly as promised.",
-    name: "Linh Nguyen",
-    role: "VP Product",
+      "Working with Geveo was a game-changer. They brought in deep technical expertise, innovative thinking, and a strong commitment to results.",
+    name: "Matthew Morgan",
+    role: "Co-Founder & CEO",
     company: "Argyle Insurance",
-    initials: "LN",
-  },
-  {
-    quote:
-      "Specialised XRPL Hooks engineering at a level very few teams in the world can match. Geveo has become foundational to our roadmap.",
-    name: "Marcus Eriksson",
-    role: "Protocol Lead",
-    company: "iXRPL",
-    initials: "ME",
+    initials: "MM",
+    image: mattImage,
   },
 ];
 
@@ -90,8 +71,8 @@ export function Testimonials() {
                   "{t.quote}"
                 </p>
                 <div className="mt-10 flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-gradient-to-br from-[#53ad6f] to-[#3d8a55] text-white grid place-items-center font-display font-semibold">
-                    {t.initials}
+                  <div className="h-16 w-16 overflow-hidden rounded-full border border-border bg-slate-100">
+                    <img src={t.image} alt={t.name} className="h-full w-full object-cover" />
                   </div>
                   <div>
                     <div className="font-medium">{t.name}</div>

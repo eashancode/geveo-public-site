@@ -1,26 +1,25 @@
 import { useEffect, useRef } from "react";
-import type { IconType } from "react-icons";
 import {
-  SiAmazonaws,
-  SiDocker,
-  SiDotnet,
   SiFigma,
-  SiFirebase,
-  SiGithub,
-  SiJavascript,
-  SiKubernetes,
-  SiMongodb,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiOpenai,
-  SiPostgresql,
-  SiPython,
-  SiReact,
-  SiRedis,
   SiTailwindcss,
+  SiGithub,
+  SiFirebase,
+  SiRedis,
+  SiMongodb,
   SiTypescript,
+  SiNextdotjs,
+  SiPostgresql,
+  SiDocker,
+  SiPython,
+  SiOpenai,
   SiMicrosoftazure,
-} from "react-icons/si";
+  SiJavascript,
+  SiDotnet,
+  SiReact,
+  SiAmazonaws,
+  SiNodedotjs,
+  SiKubernetes,
+} from "react-icons/si/index.js";
 
 const groups = [
   {
@@ -117,7 +116,7 @@ type LogoNode = {
   size: number;
   delay: number;
   duration: number;
-  icon: IconType;
+  Icon: React.ComponentType<{ className?: string }>; 
   color: string;
   /** depth: 1 = far/small/blurred, 2 = mid, 3 = near/sharp */
   depth: 1 | 2 | 3;
@@ -126,30 +125,30 @@ type LogoNode = {
 // Curated, layered layout — three depth planes for cinematic parallax
 const nodes: LogoNode[] = [
   // Far layer — small, soft, slow
-  { slug: "figma",       name: "Figma",      icon: SiFigma,         color: "#F24E1E", x: 8,  y: 14, size: 26, delay: 0.2, duration: 11, depth: 1 },
-  { slug: "tailwindcss", name: "Tailwind",   icon: SiTailwindcss,  color: "#06B6D4", x: 92, y: 18, size: 24, delay: 1.0, duration: 12, depth: 1 },
-  { slug: "github",      name: "GitHub",     icon: SiGithub,        color: "#181717", x: 10, y: 86, size: 26, delay: 2.4, duration: 11, depth: 1 },
-  { slug: "firebase",    name: "Firebase",   icon: SiFirebase,      color: "#FFCA28", x: 90, y: 88, size: 24, delay: 1.6, duration: 12, depth: 1 },
-  { slug: "redis",       name: "Redis",      icon: SiRedis,         color: "#DC382D", x: 6,  y: 50, size: 24, delay: 3.0, duration: 13, depth: 1 },
-  { slug: "mongodb",     name: "MongoDB",    icon: SiMongodb,       color: "#47A248", x: 94, y: 52, size: 26, delay: 2.2, duration: 12, depth: 1 },
-  { slug: "langchain",   name: "LangChain",  icon: SiOpenai,        color: "#11A37E", x: 50, y: 4,  size: 24, delay: 1.8, duration: 13, depth: 1 },
+  { slug: "figma",       name: "Figma",      Icon: SiFigma,      color: "#F24E1E", x: 8,  y: 14, size: 26, delay: 0.2, duration: 11, depth: 1 },
+  { slug: "tailwindcss", name: "Tailwind",   Icon: SiTailwindcss,color: "#06B6D4", x: 92, y: 18, size: 24, delay: 1.0, duration: 12, depth: 1 },
+  { slug: "github",      name: "GitHub",     Icon: SiGithub,     color: "#181717", x: 10, y: 86, size: 26, delay: 2.4, duration: 11, depth: 1 },
+  { slug: "firebase",    name: "Firebase",   Icon: SiFirebase,   color: "#FFCA28", x: 90, y: 88, size: 24, delay: 1.6, duration: 12, depth: 1 },
+  { slug: "redis",       name: "Redis",      Icon: SiRedis,      color: "#DC382D", x: 6,  y: 50, size: 24, delay: 3.0, duration: 13, depth: 1 },
+  { slug: "mongodb",     name: "MongoDB",    Icon: SiMongodb,    color: "#47A248", x: 94, y: 52, size: 26, delay: 2.2, duration: 12, depth: 1 },
+  { slug: "openai",       name: "OpenAI",     Icon: SiOpenai,    color: "#000000", x: 50, y: 4,  size: 24, delay: 1.8, duration: 13, depth: 1 },
 
   // Mid layer
-  { slug: "typescript",      name: "TypeScript", icon: SiTypescript,     color: "#3178C6", x: 24, y: 30, size: 34, delay: 0,   duration: 9,  depth: 2 },
-  { slug: "nextdotjs",       name: "Next.js",    icon: SiNextdotjs,     color: "#000000", x: 76, y: 28, size: 36, delay: 1.4, duration: 9,  depth: 2 },
-  { slug: "postgresql",      name: "PostgreSQL", icon: SiPostgresql,    color: "#336791", x: 20, y: 70, size: 34, delay: 2.0, duration: 10, depth: 2 },
-  { slug: "docker",          name: "Docker",     icon: SiDocker,         color: "#2496ED", x: 80, y: 72, size: 36, delay: 0.8, duration: 9.5, depth: 2 },
-  { slug: "python",          name: "Python",     icon: SiPython,         color: "#3776AB", x: 50, y: 92, size: 34, delay: 2.6, duration: 10, depth: 2 },
-  { slug: "openai",          name: "OpenAI",     icon: SiOpenai,         color: "#000000", x: 32, y: 14, size: 32, delay: 0.6, duration: 11, depth: 2 },
-  { slug: "microsoftazure",  name: "Azure",      icon: SiMicrosoftazure, color: "#0078D4", x: 68, y: 16, size: 32, delay: 1.2, duration: 11, depth: 2 },
-  { slug: "openjdk",         name: "Java",       icon: SiJavascript,     color: "#F7DF1E", x: 30, y: 86, size: 32, delay: 2.8, duration: 10, depth: 2 },
-  { slug: "dotnet",          name: ".NET",       icon: SiDotnet,         color: "#512BD4", x: 70, y: 88, size: 32, delay: 1.0, duration: 10, depth: 2 },
+  { slug: "typescript",      name: "TypeScript", Icon: SiTypescript,     color: "#3178C6", x: 24, y: 30, size: 34, delay: 0,   duration: 9,  depth: 2 },
+  { slug: "nextdotjs",       name: "Next.js",    Icon: SiNextdotjs,      color: "#000000", x: 76, y: 28, size: 36, delay: 1.4, duration: 9,  depth: 2 },
+  { slug: "postgresql",      name: "PostgreSQL", Icon: SiPostgresql,     color: "#336791", x: 20, y: 70, size: 34, delay: 2.0, duration: 10, depth: 2 },
+  { slug: "docker",          name: "Docker",     Icon: SiDocker,         color: "#2496ED", x: 80, y: 72, size: 36, delay: 0.8, duration: 9.5, depth: 2 },
+  { slug: "python",          name: "Python",     Icon: SiPython,         color: "#3776AB", x: 50, y: 92, size: 34, delay: 2.6, duration: 10, depth: 2 },
+  { slug: "openai",          name: "OpenAI",     Icon: SiOpenai,         color: "#000000", x: 32, y: 14, size: 32, delay: 0.6, duration: 11, depth: 2 },
+  { slug: "microsoftazure",  name: "Azure",      Icon: SiMicrosoftazure, color: "#0078D4", x: 68, y: 16, size: 32, delay: 1.2, duration: 11, depth: 2 },
+  { slug: "openjdk",         name: "Java",       Icon: SiJavascript,    color: "#F7DF1E", x: 30, y: 86, size: 32, delay: 2.8, duration: 10, depth: 2 },
+  { slug: "dotnet",          name: ".NET",       Icon: SiDotnet,         color: "#512BD4", x: 70, y: 88, size: 32, delay: 1.0, duration: 10, depth: 2 },
 
   // Near layer — larger, sharper, faster drift
-  { slug: "react",             name: "React",      icon: SiReact,          color: "#61DAFB", x: 36, y: 48, size: 52, delay: 0,   duration: 7, depth: 3 },
-  { slug: "amazonwebservices", name: "AWS",        icon: SiAmazonaws,      color: "#FF9900", x: 64, y: 50, size: 52, delay: 1.2, duration: 7.5, depth: 3 },
-  { slug: "nodedotjs",         name: "Node.js",    icon: SiNodedotjs,      color: "#339933", x: 50, y: 32, size: 46, delay: 2.0, duration: 8, depth: 3 },
-  { slug: "kubernetes",        name: "Kubernetes", icon: SiKubernetes,      color: "#326CE5", x: 50, y: 68, size: 46, delay: 0.4, duration: 8, depth: 3 },
+  { slug: "react",             name: "React",      Icon: SiReact,         color: "#61DAFB", x: 36, y: 48, size: 52, delay: 0,   duration: 7, depth: 3 },
+  { slug: "amazonwebservices", name: "AWS",        Icon: SiAmazonaws,     color: "#FF9900", x: 64, y: 50, size: 52, delay: 1.2, duration: 7.5, depth: 3 },
+  { slug: "nodedotjs",         name: "Node.js",    Icon: SiNodedotjs,     color: "#339933", x: 50, y: 32, size: 46, delay: 2.0, duration: 8, depth: 3 },
+  { slug: "kubernetes",        name: "Kubernetes", Icon: SiKubernetes,    color: "#326CE5", x: 50, y: 68, size: 46, delay: 0.4, duration: 8, depth: 3 },
 ];
 
 function TechEcosystem() {
@@ -272,8 +271,6 @@ function FloatingLogo({ node }: { node: LogoNode }) {
     3: { opacity: 0.82, blur: "blur(0px)",   parallax: 26, baseOpacity: "82" },
   }[node.depth];
 
-  const Icon = node.icon;
-
   return (
     <div
       className="tech-logo group absolute -translate-x-1/2 -translate-y-1/2 will-change-transform"
@@ -293,17 +290,7 @@ function FloatingLogo({ node }: { node: LogoNode }) {
         className="relative grid place-items-center rounded-2xl border border-border/60 bg-background/50 backdrop-blur-md shadow-soft transition-all duration-500 group-hover:scale-110 group-hover:border-[#53ad6f]/70 group-hover:shadow-[0_12px_36px_-10px_rgba(83,173,111,0.6)] group-hover:bg-background/90"
         style={{ width: node.size + 16, height: node.size + 16 }}
       >
-        <Icon
-          className="transition-all duration-500"
-          style={{
-            width: node.size * 0.6,
-            height: node.size * 0.6,
-            opacity: depthStyles.opacity,
-            color: node.color,
-          }}
-          aria-label={node.name}
-          title={node.name}
-        />
+        <node.Icon className="h-3/4 w-3/4" style={{ color: node.color, opacity: depthStyles.opacity }} aria-label={node.name} title={node.name} />
         <span className="pointer-events-none absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[9px] tracking-[0.16em] uppercase text-[#53ad6f] opacity-0 group-hover:opacity-100 transition-opacity">
           {node.name}
         </span>

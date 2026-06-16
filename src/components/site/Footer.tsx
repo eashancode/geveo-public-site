@@ -1,33 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import gptw from "@/assets/geveo_GPTW_new_300.png";
-import { Facebook, Globe, Instagram, Linkedin, X, Youtube } from "lucide-react";
+import { Facebook, Globe, Instagram, Linkedin, Youtube } from "lucide-react";
+import { SiX } from "react-icons/si/index.js";
 
 const SOCIAL_LINKS = [
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/company/geveo-australasia",
-    Icon: Linkedin,
-  },
-  {
-    label: "YouTube",
-    href: "http://www.youtube.com/c/GeveoAustralasia",
-    Icon: Youtube,
-  },
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/geveo",
-    Icon: Facebook,
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/geveo.au/",
-    Icon: Instagram,
-  },
-  {
-    label: "X",
-    href: "https://x.com/GeveoAu",
-    Icon: X,
-  },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/geveo-australasia", Icon: Linkedin },
+  { label: "YouTube", href: "http://www.youtube.com/c/GeveoAustralasia", Icon: Youtube },
+  { label: "Facebook", href: "https://www.facebook.com/geveo", Icon: Facebook },
+  { label: "Instagram", href: "https://www.instagram.com/geveo.au/", Icon: Instagram },
+  { label: "X", href: "https://x.com/GeveoAu", Icon: SiX },
 ];
 
 export function Footer() {
@@ -44,81 +25,42 @@ export function Footer() {
               Colombo. Trusted worldwide.
             </p>
           </div>
-          <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm">
-            {[
-              {
-                heading: "Company",
-                links: [
-                  { label: "About Us", to: "/about" },
-                  { label: "Story", href: "/geveo-public-site/#company" },
-                  { label: "Careers", to: "/careers" },
-                  { label: "Contact", href: "/geveo-public-site/#contact" },
-                ],
-              },
-              {
-                heading: "Solutions",
-                links: [
-                  { label: "Specialised", to: "/solutions" },
-                  { label: "Enterprise", to: "/solutions" },
-                  { label: "Cloud", to: "/solutions" },
-                  { label: "Data & AI", to: "/solutions" },
-                ],
-              },
-              {
-                heading: "Work",
-                links: [
-                  { label: "Case Studies", to: "/case-studies" },
-                  { label: "Industries", to: "/case-studies" },
-                  { label: "Partners", to: "/about" },
-                ],
-              },
-              {
-                heading: "Connect",
-                links: [
-                  { label: "GitHub", href: "https://github.com/geveo", external: true },
-                  { label: "Email", href: "mailto:hello@geveo.com", external: true },
-                ],
-              },
-            ].map(({ heading, links }) => (
-              <div key={heading}>
-                <div className="font-mono text-[10px] tracking-[0.18em] uppercase text-muted-foreground">{heading}</div>
-                <ul className="mt-3 space-y-2">
-                  {links.map((link) => (
-                    <li key={link.label}>
-                      {'to' in link && link.to ? (
-                        <Link to={link.to} className="text-foreground/80 hover:text-primary transition-colors">
-                          {link.label}
-                        </Link>
-                      ) : (
-                        <a
-                          href={('href' in link && link.href) || '#'}
-                          target={'external' in link && link.external ? "_blank" : undefined}
-                          rel={'external' in link && link.external ? "noreferrer noopener" : undefined}
-                          className="text-foreground/80 hover:text-primary transition-colors"
-                        >
-                          {link.label}
-                        </a>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="md:col-span-7">
+            <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-foreground/80">
+              <li>
+                <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-primary transition-colors">About Us</Link>
+              </li>
+              <li>
+                <Link to="/solutions" className="hover:text-primary transition-colors">Solutions</Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link>
+              </li>
+              <li>
+                <Link to="/evernode" className="hover:text-primary transition-colors">Evernode</Link>
+              </li>
+              <li>
+                <Link to="/careers" className="hover:text-primary transition-colors">Careers</Link>
+              </li>
+            </ul>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label={label}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface text-foreground/80 hover:border-primary hover:text-primary transition-colors"
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          {SOCIAL_LINKS.map(({ label, href, Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label={label}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface text-foreground/80 hover:border-primary hover:text-primary transition-colors"
-            >
-              <Icon className="h-5 w-5" />
-            </a>
-          ))}
         </div>
         <div className="divider-gradient my-10" />
         <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-muted-foreground">

@@ -150,46 +150,54 @@ function AboutPage() {
             }}
           />
           <div className="container-x">
-            <div className="max-w-3xl">
-              <div className="eyebrow inline-flex items-center gap-2">
-                <Sparkles className="h-3.5 w-3.5" /> About Geveo
+            <div className="grid lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-6">
+                <div className="max-w-3xl">
+                  <div className="eyebrow inline-flex items-center gap-2">
+                    <Sparkles className="h-3.5 w-3.5" /> About Geveo
+                  </div>
+                  <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-[-0.03em] text-balance font-semibold">
+                    Your Trusted{" "}
+                    <span className="bg-gradient-to-r from-[#53AB6F]  to-[#20B2AA] bg-clip-text text-transparent">
+                      Digital Transformation
+                    </span>{" "}
+                    Partner
+                  </h1>
+                  <p className="mt-6 text-lg text-muted-foreground text-pretty max-w-2xl">
+                    Transforming ideas into intelligent digital solutions through
+                    innovation, engineering excellence and long-term partnerships.
+                  </p>
+                  <p className="mt-4 text-muted-foreground text-pretty max-w-2xl">
+                    At Geveo, we help organizations solve complex business
+                    challenges through AI, enterprise software, digital platforms
+                    and emerging technologies. Our mission is to deliver solutions
+                    that create measurable business value while building lasting
+                    partnerships with our clients.
+                  </p>
+                  <div className="mt-8 flex flex-wrap items-center gap-3">
+                    <Link
+                      to="/case-studies"
+                      className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground pl-5 pr-2 py-2 text-sm font-medium shadow-green hover:brightness-105 transition-all"
+                    >
+                      Explore our work
+                      <span className="grid h-7 w-7 place-items-center rounded-full bg-primary-foreground/15 group-hover:translate-x-0.5 transition-transform">
+                        →
+                      </span>
+                    </Link>
+                    <a
+                      href="/geveo-public-site/#contact"
+                      className="inline-flex items-center gap-2 rounded-full border border-border bg-white/70 backdrop-blur px-5 py-2 text-sm font-medium hover:border-primary/40 transition-colors"
+                    >
+                      Start a conversation
+                    </a>
+                  </div>
+                </div>
               </div>
-              <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-[-0.03em] text-balance font-semibold">
-                Your Trusted{" "}
-                <span
-                  className="bg-gradient-to-r from-[#53AB6F]  to-[#20B2AA] bg-clip-text text-transparent"
-                >
-                  Digital Transformation
-                </span>{" "}
-                Partner
-              </h1>
-              <p className="mt-6 text-lg text-muted-foreground text-pretty max-w-2xl">
-                Transforming ideas into intelligent digital solutions through
-                innovation, engineering excellence and long-term partnerships.
-              </p>
-              <p className="mt-4 text-muted-foreground text-pretty max-w-2xl">
-                At Geveo, we help organizations solve complex business
-                challenges through AI, enterprise software, digital platforms
-                and emerging technologies. Our mission is to deliver solutions
-                that create measurable business value while building lasting
-                partnerships with our clients.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link
-                  to="/case-studies"
-                  className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground pl-5 pr-2 py-2 text-sm font-medium shadow-green hover:brightness-105 transition-all"
-                >
-                  Explore our work
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-primary-foreground/15 group-hover:translate-x-0.5 transition-transform">
-                    →
-                  </span>
-                </Link>
-                <a
-                  href="/geveo-public-site/#contact"
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-white/70 backdrop-blur px-5 py-2 text-sm font-medium hover:border-primary/40 transition-colors"
-                >
-                  Start a conversation
-                </a>
+
+              <div className="lg:col-span-6">
+                <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-elev">
+                  <img src={teamOffice} alt="Team at Geveo" className="w-full h-full object-cover min-h-[320px]" />
+                </div>
               </div>
             </div>
           </div>
@@ -271,7 +279,6 @@ function AboutPage() {
                     </div>
                     <div className="mt-5">
                       <div className="font-mono text-[11px] tracking-[0.24em] text-foreground/40 group-hover:text-[#53ad6f] transition-colors">
-                        STEP {p.n}
                       </div>
                       <h3 className="mt-2 font-display text-xl tracking-[-0.01em]">
                         {p.t}

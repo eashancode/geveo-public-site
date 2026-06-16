@@ -1,4 +1,5 @@
 import { Brain, Building2, Globe, Boxes, LineChart, Sparkles, Users } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import teamHero from "@/assets/team-hero.jpg";
 import teamWhiteboard from "@/assets/team-whiteboard.jpg";
 import teamPair from "@/assets/team-pair.jpg";
@@ -45,12 +46,12 @@ export function Hero() {
                   →
                 </span>
               </a>
-              <a
-                href="/case-studies"
+              <Link
+                to="/case-studies"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-white/80 backdrop-blur px-5 py-2.5 text-sm font-medium hover:border-border-strong transition"
               >
                 Explore Our Work
-              </a>
+              </Link>
             </div>
 
             {/* Trust strip */}

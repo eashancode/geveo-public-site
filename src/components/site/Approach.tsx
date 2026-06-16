@@ -34,13 +34,9 @@ export function Approach() {
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5">
             {principles.map((p) => (
               <div key={p.t} className="relative rounded-2xl border border-border bg-card p-6 card-hover overflow-hidden">
-                <span className="absolute -right-2 -top-4 font-display font-semibold text-[64px] leading-none text-[#53ad6f]/10 select-none">
-                  {p.n}
-                </span>
                 <div className="relative">
                   <div className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-[#53ad6f]">
                     <span className="h-1 w-6 bg-[#53ad6f] rounded-full" />
-                    {p.n}
                   </div>
                   <h3 className="mt-3 font-display text-lg">{p.t}</h3>
                   <p className="mt-2 text-sm text-muted-foreground text-pretty">{p.d}</p>
@@ -94,7 +90,6 @@ export function Approach() {
 
                   <div className="mt-5">
                     <div className="font-mono text-[11px] tracking-[0.24em] text-foreground/40 group-hover:text-[#53ad6f] transition-colors">
-                      STEP {p.n}
                     </div>
                     <h3 className="mt-2 font-display text-xl md:text-[22px] tracking-[-0.01em] text-foreground/85 group-hover:text-foreground transition-colors">
                       {p.t}
@@ -105,11 +100,7 @@ export function Approach() {
                   </div>
 
                   {/* Subtle large numeral behind */}
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -top-4 right-2 lg:right-auto lg:left-0 font-display text-[88px] leading-none font-semibold text-foreground/[0.04] select-none"
-                  >
-                    {p.n}
+                  <span aria-hidden="true" className="pointer-events-none absolute -top-4 right-2 lg:right-auto lg:left-0 font-display text-[88px] leading-none font-semibold text-foreground/[0.04] select-none">
                   </span>
                 </li>
               ))}

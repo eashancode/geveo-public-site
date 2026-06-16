@@ -9,6 +9,7 @@ import {
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { TrustRecognition } from "@/components/site/TrustRecognition";
+import caseStudiesHero from "@/assets/case_studies_hero.png";
 
 type Category = "Web3" | "SaaS" | "AI" | "Enterprise" | "Mobile";
 
@@ -265,7 +266,7 @@ function CaseStudiesPage() {
               <SectionHead
                 eyebrow="AI & Innovation Projects"
                 title="Intelligent systems that change how teams work."
-                desc="AI assistants, knowledge platforms and decision intelligence — built for the enterprise."
+                desc="AI assistants, knowledge platforms and decision intelligence built for the enterprise."
               />
               <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {ai.map((p) => <ProductCard key={p.slug} project={p} />)}
@@ -310,39 +311,45 @@ function CSHero() {
         }}
       />
       <div className="container-x">
-        <div className="max-w-3xl">
-          <div className="eyebrow inline-flex items-center gap-2">
-            <Sparkles className="h-3.5 w-3.5" /> Case studies
-          </div>
-          <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-[-0.03em] text-balance font-semibold">
-            <span
-                  className="bg-gradient-to-r from-[#53AB6F]  to-[#20B2AA] bg-clip-text text-transparent"
-                >
+        <div className="grid lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-6">
+            <div className="max-w-3xl">
+              <div className="eyebrow inline-flex items-center gap-2">
+                <Sparkles className="h-3.5 w-3.5" /> Case studies
+              </div>
+              <h1 className="mt-4 font-display text-4xl md:text-6xl tracking-[-0.03em] text-balance font-semibold">
+                <span className="bg-gradient-to-r from-[#53AB6F] to-[#20B2AA] bg-clip-text text-transparent">
                   Real-world digital products
-                </span> built for measurable impact.
-          </h1>
-          <p className="mt-6 text-lg text-muted-foreground text-pretty max-w-2xl">
-            Explore our case studies across SaaS, AI and Web3 — from enterprise platforms to decentralized applications.
-          </p>
-          <p className="mt-4 text-muted-foreground text-pretty max-w-2xl">
-            Each story highlights how Geveo partners with teams to solve business challenges, speed time-to-market and deliver scalable digital capabilities.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href="/geveo-public-site/#contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground pl-5 pr-2 py-2 text-sm font-medium shadow-green hover:brightness-105 transition-all"
-            >
-              Start a project
-              <span className="grid h-7 w-7 place-items-center rounded-full bg-primary-foreground/15 group-hover:translate-x-0.5 transition-transform">
-                →
-              </span>
-            </a>
-            <a
-              href="#trust"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-white/70 backdrop-blur px-5 py-2 text-sm font-medium hover:border-primary/40 transition-colors"
-            >
-              <Globe className="h-4 w-4 text-primary" /> Trust & Recognition
-            </a>
+                </span>{" "}built for measurable impact.
+              </h1>
+              <p className="mt-6 text-lg text-muted-foreground text-pretty max-w-2xl">
+                Explore our case studies across SaaS, AI and Web3 from enterprise platforms to decentralized applications.
+              </p>
+              <p className="mt-4 text-muted-foreground text-pretty max-w-2xl">
+                Each story highlights how Geveo partners with teams to solve business challenges, speed time-to-market and deliver scalable digital capabilities.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href="/geveo-public-site/#contact"
+                  className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground pl-5 pr-2 py-2 text-sm font-medium shadow-green hover:brightness-105 transition-all"
+                >
+                  Start a project
+                  <span className="grid h-7 w-7 place-items-center rounded-full bg-primary-foreground/15 group-hover:translate-x-0.5 transition-transform">
+                    →
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6">
+              <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-elev">
+              <img
+                src={caseStudiesHero}
+                alt="Project delivery collaboration"
+                className="w-full h-full object-cover min-h-[320px]"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -385,10 +392,12 @@ function FeaturedCard({ project, large }: { project: Project; large?: boolean })
             <span key={t} className="rounded-full border border-primary/30 bg-white/70 px-2.5 py-1 text-[11px] text-primary font-medium">{t}</span>
           ))}
         </div>
-        <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground">
-          {project.href ? "View product" : "View Case Study"}
-          <ArrowRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-1" />
-        </div>
+        {project.slug !== 'roadrush' && (
+          <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground">
+            {project.href ? "View product" : "View Case Study"}
+            <ArrowRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-1" />
+          </div>
+        )}
       </div>
       <div className="md:col-span-5">
         <div className="relative h-full min-h-[200px] rounded-2xl border border-border bg-white shadow-elev overflow-hidden p-6 flex items-center justify-center">
@@ -417,6 +426,19 @@ function FeaturedCard({ project, large }: { project: Project; large?: boolean })
         <div className="absolute inset-0 blueprint-bg opacity-25 [mask-image:radial-gradient(circle_at_top_right,black_30%,transparent_70%)]" />
         {cardContent}
       </a>
+    );
+  }
+
+  if (project.slug === "roadrush") {
+    return (
+      <div
+        className={`${cardClassName} cursor-default`}
+        style={{ background: project.gradient }}
+      >
+        <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl opacity-70 transition" />
+        <div className="absolute inset-0 blueprint-bg opacity-25 [mask-image:radial-gradient(circle_at_top_right,black_30%,transparent_70%)]" />
+        {cardContent}
+      </div>
     );
   }
 
@@ -459,10 +481,7 @@ function ProductCard({ project }: { project: Project }) {
             <li key={t} className="rounded-full border border-border bg-white/70 px-2 py-0.5 text-[10px] text-muted-foreground">{t}</li>
           ))}
         </ul>
-        <div className="mt-5 inline-flex items-center gap-1.5 text-xs font-medium text-foreground">
-          View Details
-          <ArrowRight className="h-3.5 w-3.5 text-primary transition-transform group-hover:translate-x-1" />
-        </div>
+        {/* View Details removed as per UI update */}
       </div>
     </Link>
   );
