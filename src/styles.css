@@ -321,10 +321,35 @@
   .es-badge { background: rgba(255,255,255,0.18); padding: 0.72rem 0.95rem; border-radius: 16px; font-size: 0.88rem; color: var(--color-foreground); box-shadow: 0 16px 38px -24px rgba(50,107,103,0.24); transition: transform .22s ease, box-shadow .22s ease, background .22s ease; }
   .es-badge:hover { transform: translateY(-3px); box-shadow: 0 20px 44px -26px rgba(50,107,103,0.3); background: rgba(255,255,255,0.28); }
 
-  .es-slide { position: absolute; inset: 0; opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; padding:8px; }
-  .es-active { position: relative; opacity: 1; transform: translateY(0); }
-  .es-slide .es-quote-card { opacity: 0; transform: translateY(12px); transition: opacity .45s ease, transform .45s ease; }
-  .es-active .es-quote-card { opacity: 1; transform: translateY(0); }
+  .es-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateX(24px);
+    transition: opacity .6s cubic-bezier(.2,.8,.2,1), transform .6s cubic-bezier(.2,.8,.2,1);
+    padding: 8px;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .es-active {
+    position: relative;
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 2;
+    pointer-events: auto;
+  }
+
+  .es-slide .es-quote-card {
+    opacity: 0;
+    transform: translateX(14px);
+    transition: opacity .45s ease, transform .45s ease;
+  }
+
+  .es-active .es-quote-card {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
   .es-progress { display:flex; gap:10px; margin-top: 18px; justify-content: center; }
   .es-dot { width:10px; height:10px; background: rgba(137, 146, 158, 0.32); border-radius:999px; transition: width .35s ease, background .35s ease, box-shadow .35s ease; }

@@ -1,4 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
+import asankaImg from "../../assets/career_spotlight/asanka.png";
+import kawshiImg from "../../assets/career_spotlight/kawshi.png";
+import madushiImg from "../../assets/career_spotlight/madushi.png";
+import wedithaImg from "../../assets/career_spotlight/weditha.png";
 
 type Slide = {
   name: string;
@@ -14,48 +18,44 @@ const SLIDE_DELAY = 6000;
 
 const slides: Slide[] = [
   {
-    name: "Michael Perera",
-    role: "Senior Software Engineer",
+    name: "Asanka Indrajith",
+    role: "Senior Software Architect",
+    since: "At Geveo since 2013",
+    quote:
+      "What makes Geveo unique is the ability to combine architectural excellence, collaborative leadership, and impactful technology solutions.",
+    badges: ["13+ Years Experience", "Technical Leadership", "Team Mentor"],
+    image: asankaImg,
+    alt: "Asanka Indrajith, Senior Software Architect",
+  },
+  {
+    name: "Kawshi Bandara",
+    role: "QA Lead",
     since: "At Geveo since 2016",
     quote:
-      "At Geveo, I've had the opportunity to architect enterprise solutions, mentor engineers, and work directly with international clients.",
-    badges: ["8+ Years Experience", "Enterprise Solutions", "Team Mentor"],
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80",
-    alt: "Michael Perera, Senior Software Engineer",
+      "Quality at Geveo is more than finding defects, it’s about building confidence in every release through structured thinking and technical excellence.",
+    badges: ["QA Leadership", "Automation Strategy", "Cross-Team Collaboration"],
+    image: kawshiImg,
+    alt: "Kawshi Bandara, QA Lead",
   },
   {
-    name: "Sarah Ahmed",
-    role: "Cloud Engineer",
-    since: "At Geveo since 2019",
+    name: "Madushi Sarathchandra",
+    role: "Associate Tech Lead",
+    since: "At Geveo since 2022",
+    quote:
+      "What makes Geveo special is empowering engineers to grow into leaders while driving high-quality, scalable software solutions.",
+    badges: ["Real Client Projects", "Mentorship Program", "Career Growth"],
+    image: madushiImg,
+    alt: "Madushi Sarathchandra, Associate Tech Lead",
+  },
+  {
+    name: "Weditha Vishwa",
+    role: "Intern - Software Engineering",
+    since: "Followed 6 month internship in 2026",
     quote:
       "The supportive culture and continuous learning opportunities have helped me grow both technically and professionally.",
-    badges: ["Microsoft Certified", "Global Projects", "Cloud Specialist"],
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80",
-    alt: "Sarah Ahmed, Cloud Engineer",
-  },
-  {
-    name: "Kavindu Silva",
-    role: "Software Engineering Intern",
-    since: "Intern since 2024",
-    quote:
-      "From day one I was contributing to real projects and learning directly from experienced engineers.",
-    badges: ["Real Client Projects", "Mentorship Program", "Career Growth"],
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
-    alt: "Kavindu Silva, Software Engineering Intern",
-  },
-  {
-    name: "James Fernando",
-    role: "Technical Lead",
-    since: "At Geveo since 2012",
-    quote:
-      "What makes Geveo special is the balance between technical excellence, collaboration and meaningful impact.",
-    badges: ["Solution Architecture", "Team Leadership", "Global Delivery"],
-    image:
-      "https://images.unsplash.com/photo-1566753323558-f4e0952af115?auto=format&fit=crop&w=900&q=80",
-    alt: "James Fernando, Technical Lead",
+    badges: ["Emerging Talent", "Collaborative Culture", "Future Innovation"],
+    image: wedithaImg,
+    alt: "Weditha Vishwa, Intern - Software Engineering",
   },
 ];
 
