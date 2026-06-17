@@ -10,19 +10,60 @@ import gptw from "@/assets/geveo_GPTW_new_300.png";
 import teamStandup from "@/assets/team-standup.jpg";
 import teamReview from "@/assets/team-review.jpg";
 import teamWhiteboard from "@/assets/team-whiteboard.jpg";
-import teamPair from "@/assets/team-pair.jpg";
 import teamOffice from "@/assets/team-office.jpg";
 import raviImg from "@/assets/ravi.png";
 import yudhishImg from "@/assets/yudhish.png";
 import hethuImg from "@/assets/hethu.png";
+import mentorship from "@/assets/life_geveo/mentorship.png";
+import teamcelebrations from "@/assets/life_geveo/team_celebration.png";
+import knowledgesharing from "@/assets/life_geveo/knowledge_sharing.png";
+import workshops from "@/assets/life_geveo/workshops.png";
+import companyevents from "@/assets/life_geveo/company_events.png";
+import community from "@/assets/life_geveo/community.png";
 
 const GALLERY: { src: string; alt: string; tag: string; span: string }[] = [
-  { src: teamOffice, alt: "Geveo team celebration at the office", tag: "Team celebrations", span: "row-span-2" },
-  { src: teamWhiteboard, alt: "Engineers in a knowledge-sharing session", tag: "Knowledge sharing", span: "" },
-  { src: teamReview, alt: "Designers and engineers in a workshop", tag: "Workshops", span: "" },
-  { src: teamStandup, alt: "Company-wide stand-up gathering", tag: "Company events", span: "row-span-2" },
-  { src: teamPair, alt: "Colleagues mentoring one another", tag: "Mentorship", span: "" },
-  { src: teamReview, alt: "Team enjoying a community activity", tag: "Community", span: "" },
+  // Gallery Item 1 - Team Office
+  {
+    src: teamcelebrations,
+    alt: "Geveo team celebration at the office",
+    tag: "Team celebrations",
+    span: "row-span-2",
+  },
+  // Gallery Item 2 - Team Whiteboard
+  {
+    src: knowledgesharing,
+    alt: "Engineers in a knowledge-sharing session",
+    tag: "Knowledge sharing",
+    span: "",
+  },
+  // Gallery Item 3 - Team Review
+  {
+    src: workshops,
+    alt: "Designers and engineers in a workshop",
+    tag: "Workshops",
+    span: "",
+  },
+  // Gallery Item 4 - Team Standup
+  {
+    src: companyevents,
+    alt: "Company-wide stand-up gathering",
+    tag: "Company events",
+    span: "row-span-2",
+  },
+  // Gallery Item 5 - Team Pair
+  {
+    src: mentorship,
+    alt: "Colleagues mentoring one another",
+    tag: "Mentorship",
+    span: "",
+  },
+  // Gallery Item 6 - Team Community
+  {
+    src: community,
+    alt: "Team enjoying a community activity",
+    tag: "Community",
+    span: "",
+  },
 ];
 
 const CULTURE_CARDS = [
