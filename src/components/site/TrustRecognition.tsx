@@ -14,7 +14,7 @@ export function TrustRecognition() {
           <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-primary/15 blur-3xl" />
           <div className="absolute -left-20 -bottom-20 h-72 w-72 rounded-full bg-[#2f9bd6]/10 blur-3xl" />
 
-          <div className="relative grid lg:grid-cols-12 gap-10 items-center">
+          <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
               <div className="eyebrow inline-flex items-center gap-2">
                 <Award className="h-3.5 w-3.5" /> Trusted Technology Partner
@@ -30,9 +30,9 @@ export function TrustRecognition() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative rounded-2xl border border-border bg-white p-6 shadow-elev flex items-center gap-5">
-                <img src={gptw} alt="Great Place To Work · Certified" className="h-28 w-auto" />
-                <div>
+              <div className="relative rounded-2xl border border-border bg-white p-6 shadow-elev flex flex-col items-start gap-5 sm:flex-row sm:items-center w-full">
+                <img src={gptw} alt="Great Place To Work · Certified" className="h-28 w-auto mx-auto sm:mx-0" />
+                <div className="w-full">
                   <div className="font-mono text-[10px] tracking-[0.18em] uppercase text-primary">
                     Certified
                   </div>

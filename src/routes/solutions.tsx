@@ -209,7 +209,7 @@ function SolHero() {
                 Modernize legacy systems, build enterprise platforms and craft customer experiences with senior teams who deliver strategy, engineering and long-term value.
               </p>
               <p className="mt-4 text-muted-foreground text-pretty max-w-2xl">
-                At Geveo, we help organizations design and scale digital capabilities across SaaS, AI, cloud and Web3 — with quality, security and business outcomes at the core.
+                At Geveo, we help organizations design and scale digital capabilities across SaaS, AI, cloud and Web3 with quality, security and business outcomes at the core.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a

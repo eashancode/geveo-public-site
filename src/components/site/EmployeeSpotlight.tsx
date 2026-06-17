@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { ArrowRightCircle } from "lucide-react";
 import asankaImg from "../../assets/career_spotlight/asanka.png";
 import kawshiImg from "../../assets/career_spotlight/kawshi.png";
 import madushiImg from "../../assets/career_spotlight/madushi.png";
@@ -50,7 +51,7 @@ const slides: Slide[] = [
   {
     name: "Weditha Vishwa",
     role: "Intern - Software Engineering",
-    since: "Followed 6 month internship in 2026",
+    since: "Completed a six-month internship in 2026.",
     quote:
       "The supportive culture and continuous learning opportunities have helped me grow both technically and professionally.",
     badges: ["Emerging Talent", "Collaborative Culture", "Future Innovation"],
@@ -106,13 +107,14 @@ export default function EmployeeSpotlight() {
 
             <div className="es-quote-card">
               <blockquote className="es-quote">“{s.quote}”</blockquote>
-              <div className="es-badges" aria-hidden={false}>
+              <ul className="es-badges" aria-hidden={false}>
                 {s.badges.map((b) => (
-                  <div key={b} className="es-badge">
-                    ✓ {b}
-                  </div>
+                  <li key={b} className="es-badge">
+                    <ArrowRightCircle className="es-badge-icon" />
+                    <span>{b}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         ))}
