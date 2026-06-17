@@ -7,9 +7,6 @@ import {
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import gptw from "@/assets/geveo_GPTW_new_300.png";
-import teamStandup from "@/assets/team-standup.jpg";
-import teamReview from "@/assets/team-review.jpg";
-import teamWhiteboard from "@/assets/team-whiteboard.jpg";
 import teamOffice from "@/assets/team-office.jpg";
 import raviImg from "@/assets/ravi.png";
 import yudhishImg from "@/assets/yudhish.png";

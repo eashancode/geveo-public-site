@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import teamOffice from "@/assets/team-office.jpg";
 
 const milestones = [
   { y: "2008", t: "Founded in Colombo", d: "Geveo is established with a vision to deliver world-class digital engineering from Sri Lanka." },
@@ -35,10 +36,10 @@ export function Story() {
           <div className="lg:col-span-5">
             <div className="mt-8 rounded-2xl overflow-hidden border border-border shadow-card">
               <img
-                src={new URL("../../assets/team-office.jpg", import.meta.url).href}
+                src={teamOffice}
                 alt="Geveo engineering floor"
                 loading="lazy"
-                className="w-full h-full object-cover aspect-[5/4]"
+                className="w-full h-full object-cover aspect-5/4"
               />
             </div>
           </div>
