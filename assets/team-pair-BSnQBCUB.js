@@ -1,1 +1,0 @@
-const e="/geveo-public-site/assets/team-standup-CpXkPvKB.jpg",t="/geveo-public-site/assets/team-review-RbJ7Qlzp.jpg",s="/geveo-public-site/assets/team-whiteboard-BDeJFnet.jpg",a="/geveo-public-site/assets/team-pair-Cfjk9UT9.jpg";export{t as a,e as b,a as c,s as t};
