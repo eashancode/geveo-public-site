@@ -174,7 +174,7 @@ const FILTERS: Array<"All" | Category> = ["All", "SaaS", "AI", "Web3", "Enterpri
 export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
-      { title: "Case Studies — Products & Platforms by Geveo" },
+      { title: "Case Studies | Products & Platforms by Geveo" },
       { name: "description", content: "Explore SaaS, AI and Web3 products engineered by Geveo — from enterprise platforms to decentralized applications." },
       { property: "og:title", content: "Products & Platforms We've Built — Geveo" },
       { property: "og:description", content: "From enterprise SaaS to AI-powered systems and Web3 dApps — the digital products built by Geveo." },

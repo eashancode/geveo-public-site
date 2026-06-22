@@ -6,7 +6,6 @@ import { Solutions } from "@/components/site/Solutions";
 import { Challenges } from "@/components/site/Challenges";
 import { Approach } from "@/components/site/Approach";
 import { TechStack } from "@/components/site/TechStack";
-// import { Impact } from "@/components/site/Impact";
 import { CaseStudies } from "@/components/site/CaseStudies";
 import { TrustRecognition } from "@/components/site/TrustRecognition";
 import { Testimonials } from "@/components/site/Testimonials";
@@ -19,7 +18,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Geveo — Engineering scalable digital solutions since 2008" },
+      { title: "Geveo | Engineering scalable digital solutions since 2008" },
       {
         name: "description",
         content:
@@ -47,7 +46,6 @@ function Index() {
         <Challenges />
         <Approach />
         <TechStack />
-        {/* <Impact /> */}
         <CaseStudies />
         <Testimonials />
         <TrustRecognition />

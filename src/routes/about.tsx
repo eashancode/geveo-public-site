@@ -73,7 +73,7 @@ const CULTURE_CARDS = [
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Geveo — Your Trusted Digital Transformation Partner" },
+      { title: "About Geveo | Your Trusted Digital Transformation Partner" },
       {
         name: "description",
         content:

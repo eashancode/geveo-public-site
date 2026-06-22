@@ -15,7 +15,7 @@ import EmployeeSpotlight from "@/components/site/EmployeeSpotlight";
 export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
-      { title: "Careers — Join Geveo's high-energy engineering team" },
+      { title: "Careers | Join Geveo's high-energy engineering team" },
       {
         name: "description",
         content:

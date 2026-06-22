@@ -46,7 +46,7 @@ const USAGE = [
 export const Route = createFileRoute("/evernode")({
   head: () => ({
     meta: [
-      { title: "EverNode by Geveo — XRPL Smart Contract Platform" },
+      { title: "EverNode by Geveo | XRPL Smart Contract Platform" },
       {
         name: "description",
         content:

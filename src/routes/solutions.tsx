@@ -144,7 +144,7 @@ const ENGAGEMENTS = [
 export const Route = createFileRoute("/solutions")({
   head: () => ({
     meta: [
-      { title: "Solutions — Digital Engineering & Transformation by Geveo" },
+      { title: "Solutions | Digital Engineering & Transformation by Geveo" },
       { name: "description", content: "Custom software, enterprise applications, mobile, CRM, FinTech, logistics, cloud and Web3 solutions engineered by Geveo." },
       { property: "og:title", content: "Digital Solutions Designed Around Your Business Goals" },
       { property: "og:description", content: "Explore Geveo's solutions across enterprise software, AI, mobile, cloud and Web3 — engineered for measurable outcomes." },
