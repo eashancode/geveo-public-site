@@ -52,7 +52,7 @@ export const Route = createFileRoute("/evernode")({
         content:
           "Geveo built the core EverNode platform for XRPL smart contracts, XRPL Hooks and decentralized app development.",
       },
-      { property: "og:title", content: "EverNode by Geveo — XRPL Smart Contract Platform" },
+      { property: "og:title", content: "EverNode by Geveo XRPL Smart Contract Platform" },
       {
         property: "og:description",
         content:

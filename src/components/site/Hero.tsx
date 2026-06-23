@@ -15,7 +15,7 @@ const BADGES = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-32 pb-24 md:pt-36 md:pb-28">
+    <section id="top" className="relative overflow-hidden pt-25 pb-24 md:pt-25 md:pb-28">
       <HeroBackground />
       <HeroBackdrop />
 
@@ -24,7 +24,7 @@ export function Hero() {
           {/* LEFT */}
           <div className="lg:col-span-6">
 
-            <h1 className="mt-6 font-display text-4xl sm:text-5xl lg:text-[58px] leading-[1.05] tracking-[-0.03em] text-balance font-semibold">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-[58px] leading-[1.05] tracking-[-0.03em] text-balance font-semibold">
               Transforming Ideas Into{" "}
               <span className="bg-gradient-to-r from-[#53AB6F]  to-[#20B2AA] bg-clip-text text-transparent">
                 Intelligent Digital Solutions
@@ -90,7 +90,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* RIGHT — Human-centered visual */}
+          {/* RIGHT  Human-centered visual */}
           <div className="lg:col-span-6">
             <HeroVisual />
           </div>

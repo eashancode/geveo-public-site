@@ -4,7 +4,7 @@ const items = [
   { t: "Disconnected systems", d: "Disparate platforms, fragmented data and rising integration debt across the business." },
   { t: "Security & compliance", d: "Rising regulatory expectations and threat surface across cloud and digital channels." },
   { t: "Customer experience gaps", d: "Outdated digital experiences that no longer match customer or employee expectations." },
-  { t: "Transformation execution", d: "Strategy on paper but stalled delivery — programmes that need outcome-driven engineering." },
+  { t: "Transformation execution", d: "Strategy on paper but stalled delivery programmes that need outcome-driven engineering." },
 ];
 
 export function Challenges() {

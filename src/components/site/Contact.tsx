@@ -85,7 +85,7 @@ export function Contact() {
                 Ready to make your next digital initiative a measurable success?
               </h2>
               <p className="mt-5 text-muted-foreground max-w-xl text-pretty">
-                Talk to our team about your goals — we'll bring the
+                Talk to our team about your goals we'll bring the
                 engineering depth, delivery rigour and partnership mindset to
                 make it happen.
               </p>

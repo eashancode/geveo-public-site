@@ -57,7 +57,7 @@ export function Careers() {
             <p className="mt-6 max-w-xl text-white/70 text-pretty text-lg">
               At Geveo, we build meaningful software with people who care.
               We invest in learning, embrace flexibility, and collaborate on
-              global projects that move the needle — and we make room for
+              global projects that move the needle and we make room for
               real career growth along the way.
             </p>
 

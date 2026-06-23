@@ -46,7 +46,7 @@ export function Approach() {
           </div>
         </div>
 
-        {/* Delivery Process — Stripe / Linear style step flow */}
+        {/* Delivery Process  Stripe / Linear style step flow */}
         <div className="mt-28">
           <div className="text-center">
             <div className="font-mono text-[11px] tracking-[0.32em] uppercase text-foreground/40">
@@ -64,7 +64,7 @@ export function Approach() {
           </div>
 
           <div className="mt-16 relative">
-            {/* Connecting line — desktop only */}
+            {/* Connecting line  desktop only */}
             <div className="hidden lg:block absolute left-0 right-0 top-[34px] px-[6%]">
               <div className="relative h-px w-full bg-gradient-to-r from-transparent via-foreground/15 to-transparent">
                 <svg viewBox="0 0 1000 2" preserveAspectRatio="none" className="absolute inset-0 w-full h-full">

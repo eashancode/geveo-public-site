@@ -30,7 +30,7 @@ export function People() {
             <p className="mt-5 text-muted-foreground text-pretty max-w-xl">
               Our culture is built around real collaboration, creative
               problem-solving and a quiet obsession with quality. Great
-              software is the by-product of great teams — and we invest in
+              software is the by-product of great teams and we invest in
               ours accordingly.
             </p>
 

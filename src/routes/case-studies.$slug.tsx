@@ -7,7 +7,7 @@ import { PROJECTS, type Project } from "./case-studies";
 export const Route = createFileRoute("/case-studies/$slug")({
   head: ({ params }) => {
     const p = PROJECTS.find((x) => x.slug === params.slug);
-    const title = p ? `${p.name} — Geveo Case Study` : "Case Study — Geveo";
+    const title = p ? `${p.name} | Geveo Case Study` : "Case Study Geveo";
     const desc = p?.description ?? "A Geveo product case study.";
     return {
       meta: [
@@ -93,7 +93,7 @@ function CaseStudyDetail() {
             <div className="lg:col-span-8 space-y-12">
               <Block Icon={Target} title="Business Challenge">
                 The client needed a partner who could combine deep engineering expertise with
-                a clear understanding of {project.categories.join(", ").toLowerCase()} ecosystems —
+                a clear understanding of {project.categories.join(", ").toLowerCase()} ecosystems
                 without compromising on speed, security or scale.
               </Block>
               <Block Icon={Lightbulb} title="Solution Delivered">
@@ -146,7 +146,7 @@ function CaseStudyDetail() {
 
               <Block Icon={TrendingUp} title="Business Outcomes">
                 Faster time-to-market, reduced operational overhead and measurable adoption across
-                the target user base — with a platform engineered for the next phase of growth.
+                the target user base with a platform engineered for the next phase of growth.
               </Block>
             </div>
 

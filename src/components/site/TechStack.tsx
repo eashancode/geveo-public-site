@@ -122,9 +122,9 @@ type LogoNode = {
   depth: 1 | 2 | 3;
 };
 
-// Curated, layered layout — three depth planes for cinematic parallax
+// Curated, layered layout  three depth planes for cinematic parallax
 const nodes: LogoNode[] = [
-  // Far layer — small, soft, slow
+  // Far layer  small, soft, slow
   { slug: "figma",       name: "Figma",      Icon: SiFigma,      color: "#F24E1E", x: 8,  y: 14, size: 26, delay: 0.2, duration: 11, depth: 1 },
   { slug: "tailwindcss", name: "Tailwind",   Icon: SiTailwindcss,color: "#06B6D4", x: 92, y: 18, size: 24, delay: 1.0, duration: 12, depth: 1 },
   { slug: "github",      name: "GitHub",     Icon: SiGithub,     color: "#181717", x: 10, y: 86, size: 26, delay: 2.4, duration: 11, depth: 1 },
@@ -144,7 +144,7 @@ const nodes: LogoNode[] = [
   { slug: "openjdk",         name: "Java",       Icon: SiJavascript,    color: "#F7DF1E", x: 30, y: 86, size: 32, delay: 2.8, duration: 10, depth: 2 },
   { slug: "dotnet",          name: ".NET",       Icon: SiDotnet,         color: "#512BD4", x: 70, y: 88, size: 32, delay: 1.0, duration: 10, depth: 2 },
 
-  // Near layer — larger, sharper, faster drift
+  // Near layer  larger, sharper, faster drift
   { slug: "react",             name: "React",      Icon: SiReact,         color: "#61DAFB", x: 36, y: 48, size: 52, delay: 0,   duration: 7, depth: 3 },
   { slug: "amazonwebservices", name: "AWS",        Icon: SiAmazonaws,     color: "#FF9900", x: 64, y: 50, size: 52, delay: 1.2, duration: 7.5, depth: 3 },
   { slug: "nodedotjs",         name: "Node.js",    Icon: SiNodedotjs,     color: "#339933", x: 50, y: 32, size: 46, delay: 2.0, duration: 8, depth: 3 },
@@ -154,7 +154,7 @@ const nodes: LogoNode[] = [
 function TechEcosystem() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Mouse parallax — different planes move at different intensities
+  // Mouse parallax  different planes move at different intensities
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
@@ -234,7 +234,7 @@ function TechEcosystem() {
           <span>geveo://stack</span>
         </div>
 
-        {/* Floating logos — three depth planes */}
+        {/* Floating logos  three depth planes */}
         <div className="absolute inset-0">
           {nodes.map((n) => (
             <FloatingLogo key={n.slug} node={n} />
@@ -279,7 +279,7 @@ function FloatingLogo({ node }: { node: LogoNode }) {
         top: `${node.y}%`,
         animationDelay: `${node.delay}s`,
         animationDuration: `${node.duration}s`,
-        // Mouse parallax — deeper layers shift more
+        // Mouse parallax  deeper layers shift more
         transform: `translate(calc(-50% + (var(--mx) * ${depthStyles.parallax}px)), calc(-50% + (var(--my) * ${depthStyles.parallax}px)))`,
         filter: depthStyles.blur,
         zIndex: node.depth,

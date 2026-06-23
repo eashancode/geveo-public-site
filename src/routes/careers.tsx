@@ -21,7 +21,7 @@ export const Route = createFileRoute("/careers")({
         content:
           "Join Geveo and grow with a global engineering team that delivers meaningful software, invests in learning, and values people first.",
       },
-      { property: "og:title", content: "Careers at Geveo — Build with purpose" },
+      { property: "og:title", content: "Careers at Geveo | Explore opportunities at Geveo" },
       {
         property: "og:description",
         content:
@@ -289,7 +289,7 @@ function CareersPage() {
                   <div style={{ position: "relative", paddingTop: "56.25%" }}>
                     <iframe
                       src="https://www.youtube.com/embed/WF2To5jzUHA"
-                      title="Geveo — Team and Culture"
+                      title="Geveo Team and Culture"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen

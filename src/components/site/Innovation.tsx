@@ -19,7 +19,7 @@ export function Innovation() {
             <p className="mt-6 text-background/70 max-w-xl text-pretty">
               Geveo engineered the core Evernode platform and continues to
               deliver specialised work on XRPL Hooks and decentralised
-              application development — an example of the technical depth we
+              application development an example of the technical depth we
               bring to the next generation of enterprise platforms.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">

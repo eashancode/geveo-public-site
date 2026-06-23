@@ -54,7 +54,7 @@ export default function VantaHero() {
           });
         }
       } catch (e) {
-        // fail silently — if Vanta doesn't load, page stays clean
+        // fail silently  if Vanta doesn't load, page stays clean
         // eslint-disable-next-line no-console
         console.warn("Vanta failed to load:", e);
       }

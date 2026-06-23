@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@GeveoAu" },
       { name: "twitter:title", content: "Geveo" },
-      { name: "twitter:description", content: "Geveo Evolution is a premium digital engineering website showcasing enterprise solutions and technical expertise." },
+      { name: "twitter:description", content: "Geveo is a digital engineering company delivering enterprise grade software, cloud, data and AI solutions." },
       { property: "og:image", content: "/assets/og-image.jpg" },
       { name: "twitter:image", content: "/assets/og-image.jpg" },
     ],

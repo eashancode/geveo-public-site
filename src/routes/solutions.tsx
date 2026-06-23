@@ -68,7 +68,7 @@ const SOLUTIONS: Solution[] = [
   {
     slug: "fintech-solutions",
     title: "FinTech Solutions",
-    short: "Secure financial platforms — payments, lending, wealth and regulatory tech.",
+    short: "Secure financial platforms payments, lending, wealth and regulatory tech.",
     Icon: Wallet,
     challenges: ["Regulatory complexity", "Real-time risk", "Trust & security"],
     approach: "Build with security-first architecture, strong observability and proven financial workflows.",
@@ -147,7 +147,7 @@ export const Route = createFileRoute("/solutions")({
       { title: "Solutions | Digital Engineering & Transformation by Geveo" },
       { name: "description", content: "Custom software, enterprise applications, mobile, CRM, FinTech, logistics, cloud and Web3 solutions engineered by Geveo." },
       { property: "og:title", content: "Digital Solutions Designed Around Your Business Goals" },
-      { property: "og:description", content: "Explore Geveo's solutions across enterprise software, AI, mobile, cloud and Web3 — engineered for measurable outcomes." },
+      { property: "og:description", content: "Explore Geveo's solutions across enterprise software, AI, mobile, cloud and Web3 engineered for measurable outcomes." },
     ],
   }),
   component: SolutionsPage,
@@ -472,7 +472,7 @@ function FinalCTA() {
               Let's Build What's Next
             </h2>
             <p className="mt-4 max-w-xl mx-auto text-muted-foreground text-pretty">
-              Talk to our engineering leaders about your roadmap — and see how we can move
+              Talk to our engineering leaders about your roadmap and see how we can move
               it forward.
             </p>
             <div className="mt-7 flex flex-wrap justify-center gap-3">

@@ -34,7 +34,7 @@ const PROJECTS: Project[] = [
     name: "ZemlyAI",
     category: "AI Receptionist for Property Management",
     categories: ["AI", "Web3"],
-    description: "AI receptionist built for Australian property managers—answers tenant and landlord calls 24/7, triages maintenance, and sends structured summaries to email or CRM.",
+    description: "AI receptionist built for Australian property managers answers tenant and landlord calls 24/7, triages maintenance, and sends structured summaries to email or CRM.",
     features: ["24/7 call answering", "Maintenance triage", "Agency-specific policies", "Call summaries to email/CRM"],
     tags: ["AI", "Property Management", "Automation", "CRM"],
     Icon: Globe,
@@ -60,7 +60,7 @@ const PROJECTS: Project[] = [
     name: "TraceHub",
     category: "Supply Chain & Blockchain",
     categories: ["Web3", "Enterprise"],
-    description: "End-to-end supply chain traceability built on blockchain — verifiable provenance from origin to shelf.",
+    description: "End-to-end supply chain traceability built on blockchain verifiable provenance from origin to shelf.",
     features: ["Provenance tracking", "Smart contracts", "IoT integration", "Audit-ready reports"],
     tags: ["EVM", "Hyperledger", "Node.js", "React"],
     Icon: Link2,
@@ -138,7 +138,7 @@ const PROJECTS: Project[] = [
     features: ["Payroll", "Performance", "Hiring"], tags: ["React", ".NET", "Azure"], Icon: Users,
     gradient: "linear-gradient(135deg,rgba(83,173,111,0.10),#fff 60%,rgba(56,140,220,0.06))", group: "saas" },
   { slug: "customer-portal", name: "Customer Portal", category: "Customer Experience", categories: ["SaaS"],
-    description: "Self-service portal for B2B customers — billing, support, integrations and APIs in one place.",
+    description: "Self-service portal for B2B customers  billing, support, integrations and APIs in one place.",
     features: ["SSO", "Billing", "Support center"], tags: ["Next.js", "Stripe", "Auth0"], Icon: LayoutDashboard,
     gradient: "linear-gradient(135deg,rgba(56,140,220,0.10),#fff 60%,rgba(83,173,111,0.05))", group: "saas" },
   { slug: "lms", name: "Learning Management Platform", category: "EdTech", categories: ["SaaS"],
@@ -164,7 +164,7 @@ const PROJECTS: Project[] = [
     features: ["NL queries", "Forecasts", "Alerts"], tags: ["DuckDB", "LLMs", "React"], Icon: BarChart3,
     gradient: "linear-gradient(135deg,rgba(83,173,111,0.10),#fff 60%,rgba(56,140,220,0.06))", group: "ai" },
   { slug: "ai-search", name: "AI Search Solutions", category: "Enterprise Search", categories: ["AI"],
-    description: "Hybrid search combining lexical, vector and re-ranking — secure across enterprise content.",
+    description: "Hybrid search combining lexical, vector and re-ranking secure across enterprise content.",
     features: ["Hybrid retrieval", "Re-ranking", "Connectors"], tags: ["OpenSearch", "Embeddings"], Icon: Search,
     gradient: "linear-gradient(135deg,rgba(56,140,220,0.10),#fff 60%,rgba(220,180,80,0.06))", group: "ai" },
 ];
@@ -175,9 +175,9 @@ export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
       { title: "Case Studies | Products & Platforms by Geveo" },
-      { name: "description", content: "Explore SaaS, AI and Web3 products engineered by Geveo — from enterprise platforms to decentralized applications." },
-      { property: "og:title", content: "Products & Platforms We've Built — Geveo" },
-      { property: "og:description", content: "From enterprise SaaS to AI-powered systems and Web3 dApps — the digital products built by Geveo." },
+      { name: "description", content: "Explore SaaS, AI and Web3 products engineered by Geveo from enterprise platforms to decentralized applications." },
+      { property: "og:title", content: "Products & Platforms We've Built Geveo" },
+      { property: "og:description", content: "From enterprise SaaS to AI-powered systems and Web3 dApps the digital products built by Geveo." },
     ],
   }),
   component: CaseStudiesPage,
@@ -232,7 +232,7 @@ function CaseStudiesPage() {
               <SectionHead
                 eyebrow="Featured Web3 & dApp Showcase"
                 title="Decentralized platforms, engineered end-to-end."
-                desc="Our flagship Web3 and AI-powered products — built from protocol to UI."
+                desc="Our flagship Web3 and AI-powered products built from protocol to UI."
               />
               <div className="mt-12 grid lg:grid-cols-2 gap-6">
                 {featured.map((p, i) => (

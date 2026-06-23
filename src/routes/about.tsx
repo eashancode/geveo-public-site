@@ -66,7 +66,7 @@ const GALLERY: { src: string; alt: string; tag: string; span: string }[] = [
 const CULTURE_CARDS = [
   { Icon: Lightbulb, t: "Innovation First", d: "We explore, prototype and ship ideas that push our craft forward." },
   { Icon: TrendingUp, t: "Growth Mindset", d: "Every engineer is supported with learning, mentorship and new challenges." },
-  { Icon: Handshake, t: "Collaboration", d: "We work shoulder-to-shoulder — across teams, time zones and disciplines." },
+  { Icon: Handshake, t: "Collaboration", d: "We work shoulder-to-shoulder across teams, time zones and disciplines." },
   { Icon: Scale, t: "Work-Life Balance", d: "We care about wellbeing as much as we care about outcomes." },
 ];
 
@@ -79,7 +79,7 @@ export const Route = createFileRoute("/about")({
         content:
           "Geveo helps organizations solve complex business challenges through AI, enterprise software, digital platforms and emerging technologies. People first. Technology driven.",
       },
-      { property: "og:title", content: "About Geveo — Trusted Digital Transformation Partner" },
+      { property: "og:title", content: "About Geveo |Trusted Digital Transformation Partner" },
       {
         property: "og:description",
         content:
