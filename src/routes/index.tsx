@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Geveo is a digital engineering company delivering enterprise-grade software, cloud, data and specialised platforms engineered in Colombo, trusted worldwide.",
+          "Geveo is a digital engineering company delivering enterprise-grade software, cloud, data and specialised platforms.",
       },
       { property: "og:title", content: "Geveo | Engineering scalable digital solutions" },
       {
